@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <unistd.h> 
+#include <unistd.h>
 /**
- * main - entry poing
+ * main -entry point
  *
  * Return: Always 1
  */
