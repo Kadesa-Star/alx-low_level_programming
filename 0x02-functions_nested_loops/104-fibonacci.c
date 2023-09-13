@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-i	int count;
+i	unsigned long int count;
 	unsigned long int fib1 = 0;
 	unsigned long int fib2 = 1;
 	unsigned long int sum;
