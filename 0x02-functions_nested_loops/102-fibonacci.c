@@ -5,23 +5,19 @@
  */
 int main(void)
 {
-	int cnt;
-	unsigned long num1 = 0;
-	int num2 = 1;
-	int sum;
+	int f1 = 1;
+	int f2 = 2;
+	int next;
+	int i;
 
-	for (cnt = 0; cnt < 50; cnt++)
+	printf("%d, ", f1);
+	for (i = 1; i < 50; i++)
 	{
-		sum = num1 + num2;
-		printf("%lu", sum);
-
-		num1 = num2;
-		num2 = sum;
-
-		if (cnt == 49)
-			printf("\n");
-		else
-			printf(",");
+		printf("%d", f2);
+		next = f1 + f2;
+		f1 = f2;
+		f2 = next;
 	}
+	printf("\n");
 	return (0);
 }
