@@ -5,16 +5,11 @@
  */
 int main(void)
 {
-	unsigned long int count;
-	unsigned long int fib1 = 0;
-	unsigned long int fib2 = 1;
-	unsigned long int sum;
-	unsigned long int fib1_half1;
-	unsigned long int fib1_half2;
-	unsigned long int fib2_half1;
-	unsigned long int fib2_half2;
-	unsigned long int half1;
-	unsigned long int half2;
+	unsigned long int count, unsigned long int fib1 = 0;
+	unsigned long int fib2 = 1, unsigned long int sum;
+	unsigned long int fib1_half1, unsigned long int fib1_half2;
+	unsigned long int fib2_half1, unsigned long int fib2_half2;
+	unsigned long int half1, unsigned long int half2;
 
 	for (count = 0; count < 92; count++)
 	{
@@ -32,8 +27,7 @@ int main(void)
 
 	for (count = 93; count < 99; count++)
 	{
-		half1 = fib1_half1 + fib2_half1;
-		half2 = fib1_half2 + fib2_half2;
+		half1 = fib1_half1 + fib2_half1, half2 = fib1_half2 + fib2_half2;
 
 		if (fib1_half2 + fib2_half2 > 9999999999)
 		{
@@ -47,8 +41,7 @@ int main(void)
 
 		fib1_half1 = fib2_half1;
 		fib1_half2 = fib2_half2;
-		fib2_half1 = half1;
-		fib2_half2 = half2;
+		fib2_half1 = half1, fib2_half2 = half2;
 	}
 	printf("\n");
 	return (0);
