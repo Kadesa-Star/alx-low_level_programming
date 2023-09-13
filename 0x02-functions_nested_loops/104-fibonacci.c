@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	unsigned long int count, unsigned long int fib1 = 0;
-	unsigned long int fib2 = 1, unsigned long int sum;
-	unsigned long int fib1_half1, unsigned long int fib1_half2;
-	unsigned long int fib2_half1, unsigned long int fib2_half2;
-	unsigned long int half1, unsigned long int half2;
+	(unsigned long int count, unsigned long int fib1 = 0);
+	(unsigned long int fib2 = 1, unsigned long int sum);
+	(unsigned long int fib1_half1, unsigned long int fib1_half2);
+	(unsigned long int fib2_half1, unsigned long int fib2_half2);
+	(unsigned long int half1, unsigned long int half2);
 
 	for (count = 0; count < 92; count++)
 	{
