@@ -6,7 +6,9 @@
 int main(void)
 {
 	int cnt;
-	unsigned long f1 = 0; f2 = 1; sum;
+	unsigned long int f1 = 0;
+	unsigned long int f2 = 1;
+	unsigned long int sum;
 
 	for (cnt = 0; cnt < 50; cnt++)
 	{
