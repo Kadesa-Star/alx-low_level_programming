@@ -6,14 +6,14 @@
 int main(void)
 {
 	int cnt;
-	int num1 = 1;
-	int num2 = 2;
+	unsigned long num1 = 0;
+	int num2 = 1;
 	int sum;
 
-	for (cnt = 1; cnt < 50; cnt++)
+	for (cnt = 0; cnt < 50; cnt++)
 	{
 		sum = num1 + num2;
-		printf("%d", sum);
+		printf("%lu", sum);
 
 		num1 = num2;
 		num2 = sum;
