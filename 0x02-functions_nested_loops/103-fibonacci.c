@@ -9,6 +9,7 @@ int main(void)
 	unsigned long int fb1 = 0;
 	unsigned long int fb2 = 1;
 	unsigned long int fbsum;
+	float total_sum;
 
 	while (1)
 	{
