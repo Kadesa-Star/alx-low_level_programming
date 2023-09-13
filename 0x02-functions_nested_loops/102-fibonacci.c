@@ -6,10 +6,9 @@
 int main(void)
 {
 	int cnt;
-
-	num1 = 0;
-	num2 = 1;
-	sum;
+	int num1 = 0;
+	int num2 = 1;
+	int sum;
 
 	for (cnt = 0; cnt < 50; cnt++)
 	{
