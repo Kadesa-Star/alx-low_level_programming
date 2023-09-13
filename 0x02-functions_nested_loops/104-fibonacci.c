@@ -6,15 +6,15 @@
 int main(void)
 {
 i	int count;
-	unsigned long fib1 = 0;
-	unsigned long fib2 = 1; 
-	unsigned long sum;
-	unsigned long fib1_half1;
-	unsigned long fib1_half2;
-	unsigned long fib2_half1;
-        unsigned long fib2_half2;
-	unsigned long half1;
-	unsigned long half2;
+	unsigned long int fib1 = 0;
+	unsigned long int fib2 = 1;
+	unsigned long int sum;
+	unsigned long int fib1_half1;
+	unsigned long int fib1_half2;
+	unsigned long int fib2_half1;
+	unsigned long int fib2_half2;
+	unsigned long int half1;
+	unsigned long int half2;
 
 	for (count = 0; count < 92; count++)
 	{
@@ -34,7 +34,7 @@ i	int count;
 	{
 		half1 = fib1_half1 + fib2_half1;
 		half2 = fib1_half2 + fib2_half2;
-		
+
 		if (fib1_half2 + fib2_half2 > 9999999999)
 		{
 			half1 += 1;
