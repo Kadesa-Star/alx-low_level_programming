@@ -5,7 +5,6 @@
  */
 int main(void)
 {
-	int i;
 	unsigned long int fb1 = 0;
 	unsigned long int fb2 = 1;
 	unsigned long int fbsum;
