@@ -12,7 +12,7 @@ int main(void)
 
 	while (1)
 	{
-		fbsum = fb1 + fb2
+		fbsum = fb1 + fb2;
 			if (fbsum > 4000000)
 				break;
 		if ((fbsum % 2) == 0)
