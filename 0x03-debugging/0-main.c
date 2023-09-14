@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * main - testing for postive of negative
- * @i: the number
  * Return: 0 (success)
  */
 int main(void)
