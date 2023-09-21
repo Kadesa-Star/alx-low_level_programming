@@ -10,16 +10,16 @@ char *cap_string(char *nn)
 
 	while (nn[i])
 	{
-		while (!(nn[i] >= 'a' && nn[i] <= 'z'))
+		while (!(nn[i] >= 'a' && nn[i] <= 'Z'))
 			i++;
 
 	if (nn[i - 1] == ' ' ||
 	nn[i - 1] == '\t' ||
 	nn[i - 1] == '\n' ||
 	nn[i - 1] == ',' ||
+	nn[i - 1] == ';' ||
 	nn[i - 1] == '.' ||
 	nn[i - 1] == '!' ||
-	nn[i - 1] == ';' ||
 	nn[i - 1] == '?' ||
 	nn[i - 1] == '"' ||
 	nn[i - 1] == '(' ||
