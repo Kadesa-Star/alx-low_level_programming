@@ -1,34 +1,34 @@
 #include "main.h"
 /**
  * *cap_string - capitalizes all words of string
- * @n: pointer to string
+ * @nn: pointer to string
  * Return: capitalized string
  */
-char *cap_string(char *n)
+char *cap_string(char *nn)
 {
 	int i = 0;
 
-	while (n[i])
+	while (nn[i])
 	{
-		while (!(n[i] >= 'a' && n[i] <= 'z'))
+		while (!(nn[i] >= 'a' && nn[i] <= 'z'))
 			i++;
 
-	if (n[i - 1] == ' ' ||
-	n[i - 1] == '\t' ||
-	n[i - 1] == '\n' ||
-	n[i - 1] == ',' ||
-	n[i - 1] == '.' ||
-	n[i - 1] == '!' ||
-	n[i - 1] == ';' ||
-	n[i - 1] == '?' ||
-	n[i - 1] == '"' ||
-	n[i - 1] == '(' ||
-	n[i - 1] == ')' ||
-	n[i - 1] == '{' ||
-	n[i - 1] == '}' ||
-	n == 0)
-		n[i] -= 32;
-	n++;
+	if (nn[i - 1] == ' ' ||
+	nn[i - 1] == '\t' ||
+	nn[i - 1] == '\n' ||
+	nn[i - 1] == ',' ||
+	nn[i - 1] == '.' ||
+	nn[i - 1] == '!' ||
+	nn[i - 1] == ';' ||
+	nn[i - 1] == '?' ||
+	nn[i - 1] == '"' ||
+	nn[i - 1] == '(' ||
+	nn[i - 1] == ')' ||
+	nn[i - 1] == '{' ||
+	nn[i - 1] == '}' ||
+	nn == 0)
+		nn[i] -= 32;
+	i++;
 	}
-	return (n);
+	return (nn);
 }
