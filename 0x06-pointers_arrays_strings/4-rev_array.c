@@ -10,10 +10,10 @@ void print_array(int *a, int n)
 	int k;
 	int temp;
 
-	for (k = 0; k < n--; k++)
+	for (k = 0; k < n / 2; k++)
 	{
 		temp = a[k];
-		a[k] = a[n];
-		a[n] = temp;
+		a[k] = a[n - k - 1];
+		a[n - k - 1] = temp;
 	}
 }
