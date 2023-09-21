@@ -26,7 +26,7 @@ char *cap_string(char *nn)
 		nn[i - 1] == ')' ||
 		nn[i - 1] == '{' ||
 		nn[i - 1] == '}' ||
-		nn == 0)
+		nn[i - 1] == '\0')
 			nn[i] -= 32;
 		i++;
 	}
