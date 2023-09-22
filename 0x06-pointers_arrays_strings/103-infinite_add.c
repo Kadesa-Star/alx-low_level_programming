@@ -15,16 +15,16 @@ void rev_string(char *n)
 	}
 	i--;
 
-	for (j = 0; j < i; j++, i---)
+	for (j = 0; j < i; j++, i--)
 	{
-		temp = *(n +j);
+		temp = *(n + j);
 		*(n + j) = *(n + i);
 		*(n + i) = temp;
 	}
 }
 
 /**
- * *infinite_add - function that adds two numbers 
+ * *infinite_add - function that adds two numbers
  * @n1: first number
  * @n2: second number
  * @r: the buffer
@@ -59,7 +59,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			overflow = 1;
 		else
 			overflow = 0;
-		if (digits >= (size_r -1))
+		if (digits >= (size_r - 1))
 			return (0);
 		*(r + digits) = (total % 10) + '0';
 		digits++;
