@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * *rot13 - encodes a string
  * @m: pointer to string
@@ -16,7 +17,7 @@ char *rot13(char *m)
 	{
 		for (l = 0; l < 52; l++)
 		{
-			if (m[k] == dataro13[l])
+			if (m[k] == first_data_set[l])
 			{
 				m[k] = datarot13[l];
 				break;
