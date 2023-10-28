@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int digt = 0, k, res;
+int digt = 0, k, result;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 	return (1);
 	}
 	digt = atoi(argv[1]);
+	result = 0;
 	if (digt < 0)
 	{
 	printf("0\n");
@@ -28,11 +29,11 @@ int main(int argc, char *argv[])
 	{
 	while (digt >= coins[k])
 	{
-	res++;
+	result++;
 	digt -= coins[k];
 	}
 	}
-	printf("%d\n", res);
+	printf("%d\n", result);
 	return (0);
 }
 
