@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
 	{
 	while (digt >= coins[k])
 	{
-	digt -= coins[k];
 	res++;
+	digt -= coins[k];
 	}
 	}
 	printf("%d\n", res);
