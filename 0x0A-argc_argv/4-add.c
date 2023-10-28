@@ -29,11 +29,11 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	for (m = 1; m < argc; m++)
-	{
-		 digt = atoi(argv[m]);
-		 result += digt;
-	}
+		for (m = 1; m < argc; m++)
+		{
+			digt = atoi(argv[m]);
+			result += digt;
+		}
 	printf("%d\n", result);
 	return (0);
 }
