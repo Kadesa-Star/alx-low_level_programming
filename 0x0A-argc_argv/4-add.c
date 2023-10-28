@@ -12,11 +12,6 @@ int main(int argc, char *argv[])
 {
 	int result = 0, digt, j, k, m;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
-
 	for (j = 1; j < argc; j++)
 	{
 		for (k = 0; argv[j][k] != '\0'; k++)
@@ -34,6 +29,6 @@ int main(int argc, char *argv[])
 			digt = atoi(argv[m]);
 			result += digt;
 		}
-	printf("%d\n", result);
-	return (0);
+		printf("%d\n", result);
+		return (0);
 }
