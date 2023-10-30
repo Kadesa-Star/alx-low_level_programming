@@ -13,11 +13,11 @@ char *str_concat(char *s1, char *s2)
 	size_t i, j, k, lim;
 	char *ptr;
 
-	if (s1 == NULL || s2 == NULL)
-	{
+	if (s1 == NULL)
 		s1 = "";
+	if (s2 == NULL)
 		s2 = "";
-	}
+
 	i = 0;
 	while (s1[i] != '\0')
 	{
@@ -37,6 +37,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (k = 0; k < i; k++)
 		ptr[k] = s11[k];
+
 	for (lim = 0; lim < j; lim++)
 		ptr[k] = s2[lim];
 		k++;
