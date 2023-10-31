@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdib.h>
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * argstostr - splits  a string into words
