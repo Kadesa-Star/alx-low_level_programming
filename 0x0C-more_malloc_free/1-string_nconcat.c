@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			concst[k] = s1[k];
 		for (k = 0; k < n; k++)
 			concst[lens1 + k] = s2[k];
-		concst[lens1 + k] = '\0';
+		concst[lens1 + n] = '\0';
 	}
 	return (concst);
 }
