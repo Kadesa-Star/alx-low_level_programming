@@ -16,11 +16,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *concst;
 	unsigned int k;
 
-	if (s1 == NULL || s2 == NULL)
-	{
+	if (s1 == NULL)
 		s1 = "";
+	if (s2 == NULL)
 		s2 = "";
-	}
 	for (k = 0; s1[k] != '\0'; k++)
 		lens1++;
 	for (k = 0; s2[k] != '\0'; k++)
