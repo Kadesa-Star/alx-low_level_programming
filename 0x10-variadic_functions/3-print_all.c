@@ -10,8 +10,8 @@
 void print_all(const char * const format, ...)
 {
 	va_list anyt;
-	int t;
-	char *str, *sep;
+	int t = 0;
+	char *str, *sep = "";
 
 	va_start(anyt, format);
 
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 					t++;
 					continue;
 				}
-				sep = ",";
+				sep = ", ";
 				t++;
 		}
 	}
