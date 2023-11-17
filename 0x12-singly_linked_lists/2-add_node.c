@@ -22,18 +22,24 @@ int _stl(const char *s)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *nod;
-
-	while (str[len])
-		len++;
+	unsigned int len = _stl(str);
 
 	nod = malloc(sizeof(list_t));
 
 	if (nod == NULL)
+	{
 		return (NULL);
+	}
 
 	nod->str = strdup(str);
 
-	nod->len = _stl(str);
+	if (nod == NULL)
+	{
+		free(nod);
+		return (NULL);
+	}
+
+	nod->len = len;
 	nod->next = (*head);
 	(*head) = nod;
 
