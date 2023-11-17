@@ -10,12 +10,13 @@ void free_list(list_t *head);
  * struct list_t - the singly linked list
  * @data: the data
  * @next: pointer to next node
- *
+ * @stri: malloc string
  * Description: struct for a singly linked list
  */
 struct list_t
 {
-	int data;
+	char *stri;
+	unsigned int data;
 	struct list_t *next;
 };
 
