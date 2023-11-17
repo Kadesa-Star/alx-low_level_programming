@@ -6,7 +6,7 @@
 
 /**
  * struct list_s - the singly linked list
- * @data: the data
+ * @len: the data
  * @next: pointer to next node
  * @str: malloc string
  * Description: struct for a singly linked list
@@ -14,7 +14,7 @@
 typedef struct list_s
 {
 char *str;
-unsigned int data;
+unsigned int len;
 struct list_s *next;
 } list_t;
 
