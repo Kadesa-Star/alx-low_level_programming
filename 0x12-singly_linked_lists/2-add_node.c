@@ -1,5 +1,19 @@
 #include "lists.h"
 /**
+ * _stl -fn return len of a string
+ * @s: character
+ * Return: 1
+ */
+int _stl(const char *s)
+{
+	int j = 0;
+
+	while (s[j] != '\0')
+		j++;
+
+	return (j);
+}
+/**
  * add_node - a func adds node at the beginning
  * @head: pointer
  * @str: string to be added
@@ -19,7 +33,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	nod->str = strdup(str);
 
-	nod->len = len;
+	nod->len = _stl(str);
 	nod->next = (*head);
 	(*head) = nod;
 

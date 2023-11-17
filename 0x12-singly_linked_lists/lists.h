@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * struct list_s - the singly linked list
  * @len: the data
@@ -21,5 +21,6 @@ struct list_s *next;
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
+int _stl(const char *c);
 
 #endif
