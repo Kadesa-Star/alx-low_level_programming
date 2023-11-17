@@ -1,6 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
-#inclide <string.h>
+#include <string.h>
 #include <stdio.h>
 /**
  * print_list - fuction that prints all elements of linked list
@@ -11,6 +11,8 @@
 size_t print_list(const list_t *h)
 {
 	size_t cnt = 0;
+
+	printf("[");
 
 	if (h != NULL)
 	{
@@ -25,6 +27,8 @@ size_t print_list(const list_t *h)
 
 	if (h != NULL)
 		printf(", ");
+
+	printf("]\n");
 
 	return (cnt);
 }
