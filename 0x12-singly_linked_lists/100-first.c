@@ -1,4 +1,4 @@
-#include "lists.h"
+#include <stdio.h>
 /**
  * myfunc - consructor att. to execute prior to main
  *
