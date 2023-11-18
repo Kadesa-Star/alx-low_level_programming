@@ -5,14 +5,13 @@
  */
 void free_list(list_t *head)
 {
+	list_t *temp;
 
-	if (head)
+	while (head)
 	{
-		free_list(head->next);
-	}
-		if (head->str)
-		{
+		temp = head->next;
 		free(head->str);
 		free(head);
+		head = temp;
 	}
 }
