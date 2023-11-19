@@ -3,7 +3,7 @@
  * myfunc - consructor att. to execute prior to main
  *
  */
-void myfunc(void) _attribute_((constructor));
+void myfunc(void)__attribute__((constructor));
 
 /**
  * mymainfunc - the implementationn part of the above

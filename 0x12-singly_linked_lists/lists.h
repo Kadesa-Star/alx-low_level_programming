@@ -24,7 +24,7 @@ list_t *add_node(list_t **head, const char *str);
 int _stl(const char *c);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
-void myfunc(void) _attribute_((constructor));
+void myfunc(void)__attribute__((constructor));
 void myfunc(void);
 
 #endif
