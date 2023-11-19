@@ -6,7 +6,7 @@
 void myfunc(void)__attribute__((constructor));
 
 /**
- * mymainfunc - the implementationn part of the above
+ * myfunc - the implementationn part of the above
  */
 void myfunc(void)
 {
