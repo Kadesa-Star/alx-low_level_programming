@@ -1,0 +1,23 @@
+#ifndef LISTS_H
+#define LISTS_H
+#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * struct listint_s - singlly linked list
+ * @n: integer
+ * @next: pointer to next node
+ *
+ * Description: this is a struct for singly linked list
+ */
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+} listint_t;
+
+size_t listint_len(const listint_t *h);
+
+#endif
