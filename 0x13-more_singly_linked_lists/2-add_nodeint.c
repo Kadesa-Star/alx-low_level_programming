@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_nodeint(listint_t - func that adds a new node at beginnning
+ * add_nodeint - func that adds a new node at beginnning
  * @head: double pointer to head
  * @n: data
  *
