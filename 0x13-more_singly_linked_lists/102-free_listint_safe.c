@@ -8,7 +8,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *t, *hr;
-	size_t count = 0;
+	unsigned int count = 0;
 	listint_t *temp;
 
 	t = *h;
@@ -19,7 +19,7 @@ size_t free_listint_safe(listint_t **h)
 	}
 	while (hr != NULL && hr->next != NULL)
 	{
-		t = t->;
+		t = t->next;
 		hr = hr->next->next;
 		if (t == hr)
 		{
