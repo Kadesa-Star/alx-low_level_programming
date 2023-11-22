@@ -24,8 +24,7 @@ size_t print_listint_safe(const listint_t *head)
 
 		if (s == f)
 		{
-			printf("-> [%p] %d\n", (void *)s, s->n);
-			printf("-> [%p] %d\n", (void *)f->next, f->next->n);
+			fprintf(stderr, "Error: Loop detected. Exiting with status 98.\n");
 			exit(98);
 		}
 	}
