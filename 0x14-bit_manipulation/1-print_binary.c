@@ -27,7 +27,7 @@ void print_binary(unsigned long int n)
 	unsigned long int db, temp;
 	char fl = 0;
 
-	db = power(2, sizeof(unsigned long int)* 8 - 1);
+	db = power(2, sizeof(unsigned long int) * 8 - 1);
 	while (db  != 0)
 	{
 		temp = n & db;
