@@ -16,7 +16,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (-1);
 	}
 	db = 1 << index;
-	tem = n & db;
+	temp = n & db;
 	if (temp == db)
 	{
 		return (1);
