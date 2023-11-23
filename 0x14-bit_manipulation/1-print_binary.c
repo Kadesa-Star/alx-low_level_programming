@@ -1,26 +1,45 @@
 #include "main.h"
 /**
+ * power - calculates power to base
+ * @base: base
+ * @pw: power
+ *
+ * Return: power
+ */
+unsigned long int power(int base, unsigned int pw)
+{
+	unsigned long int number, c;
+
+	number = 1;
+	for (c = 1; c <= pw; c++)
+	{
+		number = number * base;
+	}
+	return (number);
+}
+/**
  * print_binary - prints a number in binary
  * @n: the number
- * Return: the binary
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	int size = sizeof(unsigned long int) * 8;
-	unsigned long int mask;
-	int j;
+	unsigned long int db, temp;
+	char fl = 0;
 
-	for (j = size - 1; j >= 0; j--)
+	db = power(2, sizeof(unsigned long int)* 8 - 1);
+	while (db  != 0)
 	{
-		mask = 1UL << j;
-		if (n & mask)
+		temp = n & db;
+		if (temp == db)
 		{
+			fl = 1;
 			_putchar('1');
 		}
-		else
+		else if (fl == 1 || db == 1)
 		{
 			_putchar('0');
 		}
+		db >>= 1;
 	}
-	_putchar('\n');
 }
