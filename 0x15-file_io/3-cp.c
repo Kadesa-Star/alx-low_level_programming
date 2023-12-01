@@ -1,18 +1,5 @@
 #include "main.h"
 /**
- * print_error - copies the content of a file to another file
- * @exit_code: the number to exit with
- * @message: the message to display
- * @filename: name of file
- * @fd: file descriptor
- * Return: void
- */
-void print_error(int exit_code, const char *message, const char *filename, int
-                fd) {
-	dprintf(STDERR_FILENO, message, filename, fd);
-	exit(exit_code);
-}
-/**
  * main - main function
  * @argc: argument count
  * @argv: argument vector
@@ -20,13 +7,10 @@ void print_error(int exit_code, const char *message, const char *filename, int
  */
 int main(int argc, char *argv[])
 {
-	const char *filefrom = argv[1];
-	const char *fileto = argv[2];
-	int fdfrom;
-	int fdto;
+	const char *filefrom = argv[1], *fileto = argv[2];
+	int fdfrom, fdto;
 	char buffer[BUFFER_SIZE];
-	ssize_t readbyts;
-	ssize_t writebyts;
+	ssize_t readbyts, writebyts;
 
 	if (argc != 3)
 	{
@@ -38,8 +22,8 @@ int main(int argc, char *argv[])
 	{
 		print_error(98, "Error: Can't read from file %s\n", filefrom, fdfrom);
 	}
-
-	fdto = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fdto = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR |
+			S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (fdto == -1)
 	{
 		close(fdfrom);
@@ -62,9 +46,7 @@ int main(int argc, char *argv[])
 		print_error(98, "Error: Can't read from file %s\n", filefrom, fdfrom);
 	}
 	if (close(fdfrom) == -1)
-	{
 		print_error(100, "Error: Can't close fd %d\n", filefrom, fdfrom);
-	}
 	if (close(fdto) == -1)
 	{
 		print_error(100, "Error: Can't close fd %d\n", fileto, fdto);
