@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#define BUFF_SIZE 1024
+#define BUFFER_SIZE 1024
 
 int main(int argc, char *argv[]);
 void print_error(int exit_code, const char *message, const char *filename, int fd);

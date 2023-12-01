@@ -7,9 +7,8 @@
  * @fd: file descriptor
  * Return: void
  */
-void print_error(int exit_code, const char *message, const char *filename, int fd)
-{
-
+void print_error(int exit_code, const char *message, const char *filename, int
+                fd) {
 	dprintf(STDERR_FILENO, message, filename, fd);
 	exit(exit_code);
 }
@@ -25,7 +24,7 @@ int main(int argc, char *argv[])
 	const char *fileto = argv[2];
 	int fdfrom;
 	int fdto;
-	char buffer[BUFF_SIZE];
+	char buffer[BUFFER_SIZE];
 	ssize_t readbyts;
 	ssize_t writebyts;
 
@@ -46,7 +45,7 @@ int main(int argc, char *argv[])
 		close(fdfrom);
 		print_error(99, "Error: Can't write to file %s\n", fileto, fdto);
 	}
-	while ((readbyts = read(fdfrom, buffer, BUFF_SIZE)) > 0)
+	while ((readbyts = read(fdfrom, buffer, BUFFER_SIZE)) > 0)
 	{
 		writebyts = write(fdto, buffer, readbyts);
 		if (writebyts != readbyts)
@@ -62,7 +61,7 @@ int main(int argc, char *argv[])
 		close(fdto);
 		print_error(98, "Error: Can't read from file %s\n", filefrom, fdfrom);
 	}
-	if (close(fdto) == -1)
+	if (close(fdfrom) == -1)
 	{
 		print_error(100, "Error: Can't close fd %d\n", filefrom, fdfrom);
 	}
