@@ -17,12 +17,8 @@ NAME = school
 .PHONY: all clean oclean fclean re
 
 # Default target that builds the executable
-all: $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-# Rule to create object files from source files
-%.o: %.c m.h
-	$(CC) -c $(CFLAGS) $< -0 $@
 
 # clean rule to delete temporary files and executable
 clean:
