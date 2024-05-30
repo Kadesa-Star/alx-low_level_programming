@@ -1,0 +1,29 @@
+# variables
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# Default target that builds the executable
+all: $(NAME)
+
+# link object files to create the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# rule to create object files from source files
+%.o: %.c
+	$(CC) -c $<
+
+clean:
+	$(RM) *.o
+
+fclean: clean oclean
+	$(RM) $(NAME)
+
+# Rule to force recompilation of all source files
+re: fclean all
+
+# Ensure makefile doesn't compile if header file is missing
+$(OBJ): m.h
