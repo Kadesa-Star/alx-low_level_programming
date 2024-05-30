@@ -1,23 +1,38 @@
-# variables
+# compiler to be used
 CC = gcc
+
+# compiler flags
 CFLAGS = -Wall -Werror -Wextra -pedantic
-SRC = $(wildcard *.c)
+
+# source files
+SRC = main.c school.c
+
+# object files (automatically derived from source files)
 OBJ = $(SRC:.c=.o)
+
+# Name of executable
 NAME = school
 
+# phony targets to avoid conflicts with files of same name
+.PHONY: all clean oclean fclean re
+
 # Default target that builds the executable
-all: m.h $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+# Rule to create object files from source files
+%.o: %.c m.h
+	$(CC) -c $(CFLAGS) $< -0 $@
+
+# clean rule to delete temporary files and executable
 clean:
 	$(RM) *~ $(NAME)
-
+# oclean rule to delete object files
 oclean:
 	$(RM) $(OBJ)
 
+# fclean rule to delete all temporary files, the executable, and object files
 fclean: clean oclean
 
 # Rule to force recompilation of all source files
-re: oclean all
-
-.PHONY: all clean oclean fclean re
+re: fclean all
