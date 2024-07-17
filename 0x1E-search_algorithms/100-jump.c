@@ -16,6 +16,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t prev = 0;
 	size_t i;
 
+
 	if (array == NULL)
 		return (-1);
 
