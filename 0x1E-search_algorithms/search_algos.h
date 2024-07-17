@@ -6,11 +6,6 @@
 #include <stdlib.h>
 
 /* Example definitions in search_algos.h */
-typedef struct listint_s {
-    int n;
-    struct listint_s *next;
-} listint_t;
-
 typedef struct skiplist_s {
     int n;
     struct skiplist_s *next;
